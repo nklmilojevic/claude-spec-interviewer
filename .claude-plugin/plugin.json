@@ -1,0 +1,5 @@
+{
+  "name": "spec-interviewer",
+  "version": "1.0.0",
+  "description": "Interview users about their specifications to uncover hidden requirements, edge cases, and tradeoffs"
+}
