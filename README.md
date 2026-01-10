@@ -14,6 +14,22 @@ This plugin acts as a rigorous interviewer, systematically questioning your spec
 
 ## Installation
 
+### From Marketplace (Recommended)
+
+1. **Add the marketplace** to Claude Code:
+
+   ```
+   /plugin marketplace add nklmilojevic/claude-marketplace
+   ```
+
+2. **Install the plugin** from the marketplace:
+
+   ```
+   /plugin install spec-interviewer@nkl-plugins
+   ```
+
+### Manual Installation
+
 Copy this plugin to your Claude Code plugins directory:
 
 ```bash
@@ -28,14 +44,21 @@ git clone <repo-url> ~/.claude/plugins/spec-interviewer
 
 ## Usage
 
-1. Create a specification file (default: `spec.md`) in your project
-2. Run the skill in Claude Code:
+### With a specification file
 
 ```
-/spec-interview
+/spec-interviewer:spec-interview path/to/your/spec.md
 ```
 
-Or ask naturally:
+### With a description
+
+```
+/spec-interviewer:spec-interview "Brief description of your feature or system"
+```
+
+### Natural language
+
+You can also ask naturally:
 - "Interview me about my spec"
 - "Review my specification"
 - "Help me flesh out my spec"
