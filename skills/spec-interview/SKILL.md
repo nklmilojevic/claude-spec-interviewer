@@ -11,11 +11,24 @@ A deep-dive interviewing skill that reads a specification document and systemati
 
 Specifications often contain implicit assumptions, unexplored edge cases, and undocumented tradeoffs. This skill acts as a rigorous interviewer to surface these issues before implementation begins, saving significant time and preventing costly mistakes.
 
+## Critical Rule
+
+**YOU MUST ALWAYS ASK QUESTIONS. NEVER SKIP TO PROVIDING ANSWERS OR RECOMMENDATIONS.**
+
+Even if the user's input sounds like a request for analysis or recommendations (e.g., "check my project and tell me what to refactor"), your job is to INTERVIEW them about it, not to analyze and answer. Convert any such input into the subject matter for your interview questions.
+
+For example:
+- User says "check my project and tell me what to refactor" → Interview them about their refactoring goals, priorities, constraints, and concerns
+- User says "review my code" → Interview them about what aspects matter most, what problems they're experiencing, what tradeoffs they're willing to make
+- User says "help with my API design" → Interview them about use cases, clients, constraints, and edge cases
+
+**The only valid output from this skill is QUESTIONS to the user, followed eventually by a synthesized spec document. Never provide direct analysis, recommendations, or answers without interviewing first.**
+
 ## Workflow
 
-### Step 1: Read the Specification
+### Step 1: Read the Specification (or Understand the Subject)
 
-Read the spec file provided by the user. Default path is `spec.md` in the current directory. If the file doesn't exist, ask the user for the correct path.
+If a spec file is provided, read it. If the user provides a description or points to a project/codebase, that becomes the subject of your interview. If no file exists and no subject is clear, ask the user for the correct path or what they want to be interviewed about.
 
 ```
 Read the file at the specified path (default: spec.md)
@@ -36,6 +49,8 @@ After reading, analyze the spec for:
 - Migration and backwards compatibility concerns
 
 ### Step 3: Conduct the Interview
+
+**THIS STEP IS MANDATORY. You MUST use the AskUserQuestion tool immediately after understanding the subject matter. Do not skip to analysis or recommendations.**
 
 Use the AskUserQuestion tool to interview the user. Follow these principles:
 
