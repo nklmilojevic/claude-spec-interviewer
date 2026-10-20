@@ -1,0 +1,11 @@
+provider: claude
+model: claude-haiku-5-5
+
+style:
+  product: "A Claude Code plugin that interviews you about your specifications to uncover hidden requirements, edge cases, and tradeoffs"
+
+packages:
+  - path: .
+    files:
+      - file: .claude-plugin/plugin.json
+        key: version
